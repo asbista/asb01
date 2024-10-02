@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASB Trading Company</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            padding: 20px;
+        }
+        h1, h2 {
+            color: #333;
+        }
+        p {
+            color: #555;
+            line-height: 1.6;
+        }
+        .section {
+            background-color: #fff;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input[type="text"], input[type="email"] {
+            width: 100%;
+            padding: 10px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+        }
+        button {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <!-- IT Services Section -->
+    <div class="section">
+        <h1>IT that works for you</h1>
+        <p>Started in 2023, ASB Trading is a complete technology solution provider. We are 100% committed to making sure business owners have the most reliable and professional IT service in Dammam, Saudi Arabia. Our team of talented IT professionals can solve your IT nightmares once and for all.</p>
+        <h2>Why businesses depend on ASB Trading for IT support:</h2>
+        <ul>
+            <li><strong>Systems and Processes</strong> - Quality systems are required for top-class support.</li>
+            <li><strong>Keeping IT Real</strong> - A human-first approach to implementing technology.</li>
+            <li><strong>Commitment to data protection</strong> - We take your data security seriously.</li>
+            <li><strong>Knowledgeable team</strong> - We have a team with the expertise to handle any situation.</li>
+        </ul>
+    </div>
+
+    <!-- Mission Section -->
+    <div class="section">
+        <h2>Our Mission</h2>
+        <p>Our mission is to provide services and solutions that will enable your business to be more effective, efficient, and profitable. We take pride in delivering services that exceed your expectations, are responsive, and are built on a foundation of trust and mutual respect.</p>
+    </div>
+
+    <!-- Free Report Form -->
+    <div class="section">
+        <h2>Free Report</h2>
+        <p>The Arjun Bista Business Owner's Guide to IT Support Services and Fees</p>
+        <form id="free-report-form">
+            <div class="form-group">
+                <label for="first-name">Full Name</label>
+                <input type="text" id="first-name" name="first-name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Contact Number</label>
+                <input type="text" id="phone" name="phone" required>
+            </div>
+            <button type="submit">Get My Free Copy</button>
+        </form>
+        <p id="message"></p>
+    </div>
+</div>
+
+<script>
+    // JavaScript to handle form submission
+    document.getElementById('free-report-form').addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        // Retrieve form values
+        const firstName = document.getElementById('first-name').value;
+        const email = document.getElementById('email').value;
+        const phone = document.getElementById('phone').value;
+
+        // Simple validation
+        if (!firstName || !email || !phone) {
+            document.getElementById('message').innerText = 'Please fill in all the fields.';
+            return;
+        }
+
+        // Process the form submission (simulated)
+        document.getElementById('message').innerText = `Thank you, ${firstName}! Your free copy will be sent to ${email}.`;
+    });
+</script>
+
+</body>
+</html>
